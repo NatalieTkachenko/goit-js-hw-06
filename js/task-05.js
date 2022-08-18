@@ -5,9 +5,11 @@ let inputField = document.querySelector( "#name-input" );
 
 inputField.addEventListener( 'input', addName );
 
-function addName() {
+function addName()
+{
+    const { value } = event.target;
   
-    if ( this.value.trim().length === 0)
+    if ( value.trim().length === 0)
     {
         namePlace.textContent = "Anonymous";
     }
